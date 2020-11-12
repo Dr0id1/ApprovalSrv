@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="manicModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="invoices">
+          <Key>
+            <PropertyRef Name="idinvoices" />
+          </Key>
+          <Property Name="idinvoices" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="sourcepath" Type="nvarchar(max)" />
+          <Property Name="destinationpath" Type="nvarchar(max)" />
+          <Property Name="iddanielapproval" Type="bit" />
+          <Property Name="idjeanapproval" Type="bit" />
+          <Property Name="date" Type="datetime" />
+          <Property Name="approvaldate" Type="datetime" />
+          <Property Name="moved" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="iduser" />
+          </Key>
+          <Property Name="iduser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nchar" MaxLength="10" />
+          <Property Name="password" Type="nchar" MaxLength="10" />
+          <Property Name="admin" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="manicModelStoreContainer">
+          <EntitySet Name="invoices" EntityType="Self.invoices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="manicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="invoices">
+          <Key>
+            <PropertyRef Name="idinvoices" />
+          </Key>
+          <Property Name="idinvoices" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sourcepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="destinationpath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="iddanielapproval" Type="Boolean" />
+          <Property Name="idjeanapproval" Type="Boolean" />
+          <Property Name="date" Type="DateTime" Precision="3" />
+          <Property Name="approvaldate" Type="DateTime" Precision="3" />
+          <Property Name="moved" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="iduser" />
+          </Key>
+          <Property Name="iduser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="admin" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="manicEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="invoices" EntityType="Self.invoices" />
+          <EntitySet Name="users" EntityType="Self.users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="manicModelStoreContainer" CdmEntityContainer="manicEntities">
+          <EntitySetMapping Name="invoices">
+            <EntityTypeMapping TypeName="manicModel.invoices">
+              <MappingFragment StoreEntitySet="invoices">
+                <ScalarProperty Name="idinvoices" ColumnName="idinvoices" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sourcepath" ColumnName="sourcepath" />
+                <ScalarProperty Name="destinationpath" ColumnName="destinationpath" />
+                <ScalarProperty Name="iddanielapproval" ColumnName="iddanielapproval" />
+                <ScalarProperty Name="idjeanapproval" ColumnName="idjeanapproval" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="approvaldate" ColumnName="approvaldate" />
+                <ScalarProperty Name="moved" ColumnName="moved" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="manicModel.users">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="iduser" ColumnName="iduser" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="admin" ColumnName="admin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

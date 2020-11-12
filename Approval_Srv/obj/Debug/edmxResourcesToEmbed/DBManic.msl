@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="manicModelStoreContainer" CdmEntityContainer="manicEntities">
+    <EntitySetMapping Name="invoices">
+      <EntityTypeMapping TypeName="manicModel.invoices">
+        <MappingFragment StoreEntitySet="invoices">
+          <ScalarProperty Name="idinvoices" ColumnName="idinvoices" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sourcepath" ColumnName="sourcepath" />
+          <ScalarProperty Name="destinationpath" ColumnName="destinationpath" />
+          <ScalarProperty Name="iddanielapproval" ColumnName="iddanielapproval" />
+          <ScalarProperty Name="idjeanapproval" ColumnName="idjeanapproval" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="approvaldate" ColumnName="approvaldate" />
+          <ScalarProperty Name="moved" ColumnName="moved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="manicModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="iduser" ColumnName="iduser" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="admin" ColumnName="admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

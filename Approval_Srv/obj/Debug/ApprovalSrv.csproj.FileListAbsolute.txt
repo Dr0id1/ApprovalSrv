@@ -1,0 +1,12 @@
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\Approval_Srv.exe.config
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\Approval_Srv.exe
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\Approval_Srv.pdb
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\EntityFramework.dll
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\EntityFramework.xml
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\ApprovalSrv.csprojAssemblyReference.cache
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\ApprovalSrv.csproj.CoreCompileInputs.cache
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\ApprovalSrv.csproj.CopyComplete
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\Approval_Srv.exe
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\Approval_Srv.pdb
