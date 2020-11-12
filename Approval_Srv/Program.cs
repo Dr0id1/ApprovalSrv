@@ -14,7 +14,7 @@ namespace Approval_Srv
             // Timer initialisation
             Timer aTimer = new Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 10000;
+            aTimer.Interval = 60000;
             aTimer.Enabled = true;
 
             Console.WriteLine("Press \'q\' to quit.");
