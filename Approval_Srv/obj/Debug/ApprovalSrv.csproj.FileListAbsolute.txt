@@ -10,3 +10,5 @@ C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\ApprovalSrv.cspr
 C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\ApprovalSrv.csproj.CopyComplete
 C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\Approval_Srv.exe
 C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\obj\Debug\Approval_Srv.pdb
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dr0id\source\repos\Approval_Srv\Approval_Srv\bin\Debug\Newtonsoft.Json.xml

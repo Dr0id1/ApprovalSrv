@@ -26,6 +26,8 @@ namespace Approval_Srv
         {
             // Dtb conncetion
             manicEntities db = new manicEntities();
+            Notifications notif = new Notifications();
+
             seconds++;
             string sourcepath = "C:\\Users\\Dr0id\\Desktop\\Test";
 
@@ -48,6 +50,9 @@ namespace Approval_Srv
                     db.SaveChanges();
 
                     Console.WriteLine("Le fichier " + FileName + " a été ajouté");
+
+                    // Post invoice in Teams channel
+                    notif.PostInvoice(FileName);
                 }
                 else
                 {
